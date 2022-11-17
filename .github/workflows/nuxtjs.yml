@@ -1,32 +1,33 @@
-name: Make github pages
+name: cd
 
-on:
-  push:
-    branches: [main]
+on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  cd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
-      
-      - name: Get node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
         with:
-          node-version: '18.x'
-      
-      - name: npm ci
-        run: npm ci
-      
-      - name: build
-        run: npm run generate
-      
-      - name: deploy
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Generate
+        run: yarn generate
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: public
-          FOLDER: .output/public
-      
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
