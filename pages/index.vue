@@ -5,6 +5,7 @@
     </div>
     <a style="font-family:Inconsolata;" href="qrd">become a feeder</a>
     <div><MyFancyButton>print money button</MyFancyButton> </div>
+    <div><a style="font-family:Inconsolata;" href="img1">become a fisher</a></div>
     
 </template>
 <style>

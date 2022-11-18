@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
     ssr: false,
     app: {
-        baseURL: '/hud-sonq/kpvue'
+        baseURL: '/'
     }
 })
