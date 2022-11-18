@@ -1,9 +1,9 @@
 <template>
-    <h1>Hello, site is under construction. </h1>
+    <h1>you are forbidden from this pond</h1>
     <div>
-      <a href="/qr">Go to contracts</a>
+      <a href="/qr">become a koi</a>
     </div>
-    <MyFancyButton>Print money button</MyFancyButton>
+    <MyFancyButton>print money button</MyFancyButton>
 </template>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
