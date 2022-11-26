@@ -21,11 +21,10 @@ import { ref } from "vue";
     <vue3dLoader
     filePath="/scenef/scene.gltf"
     :height="1000"
-    :cameraPosition="{ x:10, y:0, z:-10}"
+    :cameraPosition="{ x:10, y:0, z:-1200}"
     :backgroundColor="0x000000"
     />
 </template>
-
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:wght@100&display=swap');
