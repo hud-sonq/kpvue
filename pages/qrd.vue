@@ -1,6 +1,6 @@
 <script>
-  for(var i = 1; i <= 1000; i++) { 
-    var str ='i said leave ', 
+  for(var i = 1; i <= 100; i++) { 
+    var str ='koipond.xyz', 
     span = document.createElement('span'); 
     span.innerHTML = str; 
     var body = document.getElementsByTagName('body')[0]; 

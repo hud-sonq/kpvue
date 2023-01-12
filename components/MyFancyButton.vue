@@ -10,8 +10,9 @@ button {
   width: 200px;
   border-radius: 0;
   border-width: 0;
-  background-color: rgb(0, 190, 224);
-  color: white;
+  background-color: green;
+  color: black;
+  font-family: Inconsolata;
 }
 </style>
 
