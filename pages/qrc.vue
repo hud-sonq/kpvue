@@ -10,18 +10,4 @@
 </template>
 
 <script>
-import Pomodoro from "vuemodoro";
-
-export default {
-  name: "App",
-  data() {
-    return {
-      number: 0,
-    };
-  },
-  components: {
-    Pomodoro,
-  },
-  // rest of the component
-};
 </script>
