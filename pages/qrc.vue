@@ -1,14 +1,27 @@
 
 <template>
-    <h1 style="font-family:Inconsolata;">Page 1 in progress</h1>
+  <div id="app">
+    <b-field class="timer">
+      <!-- <b-numberinput v-model="number"></b-numberinput> -->
+      <input v-model="number" type="number" placeholder="Timer duration" />
+    </b-field>
+    <Pomodoro :key="number" :minutes="number" />
+  </div>
 </template>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:wght@100&display=swap');
-  body{
-    background: rgb(0, 0, 0); /* not apply if you go from page-1 to page-2 */
-   }
-   h1   {color: rgb(72, 235, 72);text-align: center;}
+<script>
+import Pomodoro from "vuemodoro";
 
-
-</style>
+export default {
+  name: "App",
+  data() {
+    return {
+      number: 0,
+    };
+  },
+  components: {
+    Pomodoro,
+  },
+  // rest of the component
+};
+</script>
