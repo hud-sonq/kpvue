@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { vue3dLoader } from "vue-3d-loader";
 
+const enablePan = false;
+const enableZoom = false;
+const enableRotate = false;
+
 const [width, height] = [ref(0), ref(0)];
 
 function reportWindowSize() {
@@ -23,6 +27,11 @@ reportWindowSize();
         :cameraPosition="{ x:150, y:900, z:200}"
         :backgroundColor=0
         :scale="{x:1, y:1, z:1}"
+        :controlsOptions="{
+          enablePan,
+          enableZoom,
+          enableRotate,
+        }"
       />
     </div>
     
@@ -30,13 +39,6 @@ reportWindowSize();
       <h1>KOIPOND.XYZ is under construction</h1>
       <h2>Check back in a bit!</h2>
       <h2><GlowingButton>Print Money Button</GlowingButton></h2>
-      <!--<div><TickerS
-        :content="[{ name: 'okokok' }, { name: 'ok22' }]"
-        >
-        <div style="background-color: aqua;">
-          <div class="ctx"></div>
-        </div>
-      </TickerS></div> -->
     </div>
     
     
